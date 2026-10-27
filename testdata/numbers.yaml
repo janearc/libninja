@@ -1,0 +1,82 @@
+# numbers.yaml: the numbers libninja's tests are held to, by name (the maintainer's
+# ruling 4, 2026-10-18: a test's numbers live in a config, and the test
+# is held to it).
+
+numbers:
+  - name: throw-seconds
+    value: 3
+    says: how long a test lets the throw of a small house holding a kernel run before it says the reading never ends; a throw takes milliseconds, and game gives a mutant's tests 20 seconds in all
+    kind: picked
+    by: libninja's release cut, 2026-10-24
+
+  - name: open-dir
+    value: 0755
+    says: the mode a test's house writes its directories with, the owner writing and anyone opening
+    kind: picked
+    by: the author, 2026-10-18
+
+  - name: open-file
+    value: 0644
+    says: the mode a test's house writes its files with, the owner writing and anyone reading
+    kind: picked
+    by: the author, 2026-10-18
+
+  - name: shut-dir
+    value: 0
+    says: the mode a test shuts a directory with, so that no one but root can read or enter it
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: inside-again
+    value: 12
+    says: the line of the dojo's temple/inside_test.go where TestInsideAgain names an int t, which may not stand alone
+    kind: picked
+    by: libninja's release cut, 2026-10-23, where the fixture was written
+
+  - name: drawn-as-r
+    value: 34
+    says: the line of the dojo's temple/outside_test.go where a rapid property names its *rapid.T r; the line above names it t
+    kind: picked
+    by: libninja's release cut, 2026-10-23, where the fixture was written
+
+  - name: rapid-checks
+    value: 20
+    says: how many drawn modules each property writes and loads in a run, unless the run asks for more; each is a load, so rapid's own hundred would make every mutants run far longer
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: drawn-longest-function
+    value: 120
+    says: the most lines a drawn function runs to, well past the longest stance so both sides of it are drawn
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: drawn-near-stance
+    value: 2
+    says: how many lines either side of the longest stance half the drawn lengths fall within, so the edge is drawn in every run
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: drawn-most-functions
+    value: 4
+    says: the most functions a drawn module holds for the stance property
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: drawn-most-names
+    value: 8
+    says: the most one-letter names a drawn module holds for the name property
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: drawn-most-vows
+    value: 6
+    says: the most vows a drawn module holds for the vow property, each in one of seven placings
+    kind: picked
+    by: libninja's release cut, 2026-10-23
+
+  - name: tests-per-vow
+    value: 20
+    says: how many test functions a module must have to each vow before the crowd scroll is quiet; the tests hold libninja to the maintainer's ceiling of one vow in twenty tests, so changing the picked number makes them fail
+    kind: picked
+    by: "the maintainer, 2026-10-25: the ceiling is one vow per twenty tests."

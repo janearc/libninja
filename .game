@@ -1,0 +1,25 @@
+# vim: set filetype=game:
+# game: libninja
+#
+# name says which project this is. your game config has a block for it
+# that says where its road and dist are; this file never names a remote.
+name libninja
+
+# lint rules for this repository. any lint line in a .game replaces all
+# the lint rules in your game config, so these lines copy all of them.
+# the last line is the one change: README.md may run past 25 rows,
+# since it gives every scroll its reason.
+lint width 80
+lint rows 25
+lint comments
+lint print
+lint exclaim
+lint shout
+lint words hyperscaler enterprise-grade blazing-fast load-bearing
+lint paragraph 4
+lint allow README.md rows
+
+# the sweep refuses this machine's paths in a file. buried.go's work is
+# to know what one looks like, so it holds the roots of such paths as
+# patterns, not as places; it may carry them.
+sweep allow buried.go paths

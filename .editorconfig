@@ -1,0 +1,17 @@
+# how libninja is kept, for every editor that reads an .editorconfig.
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+# go: real tabs, as gofmt writes them, shown two wide.
+[*.go]
+indent_style = tab
+tab_width = 2
+
+# everything read as text: two spaces.
+[*.{md,yaml,yml,json}]
+indent_style = space
+indent_size = 2

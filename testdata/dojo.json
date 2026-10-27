@@ -1,0 +1,2366 @@
+{
+  "hits": [
+    {
+      "column": 1,
+      "file": "cmd/gate/main.go",
+      "line": 10,
+      "package": "cmd/gate",
+      "scroll": "age",
+      "seen": "This main declares no build and built, so game cannot stamp it, and does not answer --age."
+    },
+    {
+      "column": 1,
+      "file": "cmd/half/main.go",
+      "line": 13,
+      "package": "cmd/half",
+      "scroll": "age",
+      "seen": "This main does not answer --age."
+    },
+    {
+      "column": 1,
+      "file": "cmd/headless/headless.go",
+      "line": 3,
+      "package": "cmd/headless",
+      "scroll": "age",
+      "seen": "This main declares no build and built, so game cannot stamp it, and does not answer --age."
+    },
+    {
+      "column": 1,
+      "file": "cmd/lookalike/main.go",
+      "line": 19,
+      "package": "cmd/lookalike",
+      "scroll": "age",
+      "seen": "This main does not answer --age."
+    },
+    {
+      "column": 6,
+      "file": "drums/drums.go",
+      "line": 6,
+      "package": "drums",
+      "scroll": "practice",
+      "seen": "Roll is used from outside only by tests."
+    },
+    {
+      "column": 26,
+      "file": "drums/drums.go",
+      "line": 6,
+      "package": "drums",
+      "scroll": "number",
+      "seen": "8 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "drumstest/drumstest.go",
+      "line": 6,
+      "package": "drumstest",
+      "scroll": "number",
+      "seen": "4 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "fmttest/fmttest.go",
+      "line": 8,
+      "package": "fmttest",
+      "scroll": "number",
+      "seen": "6 is a bare number."
+    },
+    {
+      "column": 6,
+      "file": "mocks/bells.go",
+      "line": 31,
+      "package": "mocks",
+      "scroll": "decoy",
+      "seen": "MockGong is a mock of Gong that no test makes."
+    },
+    {
+      "column": 9,
+      "file": "ostest/ostest.go",
+      "line": 3,
+      "package": "ostest",
+      "scroll": "practice",
+      "seen": "ostest is made for tests, and no test imports it."
+    },
+    {
+      "column": 25,
+      "file": "ostest/ostest.go",
+      "line": 8,
+      "package": "ostest",
+      "scroll": "number",
+      "seen": "9 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "ostest/rust.go",
+      "line": 4,
+      "package": "ostest",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 2,
+      "file": "temple/banner.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Banner.Title stands open."
+    },
+    {
+      "column": 2,
+      "file": "temple/banner.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Banner.Motto stands open. Its tag says a reader needs it. If this is the wire, vow it."
+    },
+    {
+      "column": 21,
+      "file": "temple/bells.go",
+      "line": 19,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Garden.Gate stands open."
+    },
+    {
+      "column": 2,
+      "file": "temple/temple.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Sword.Edge stands open; touched from village."
+    },
+    {
+      "column": 2,
+      "file": "temple/vows.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Rope.Loose stands open."
+    },
+    {
+      "column": 5,
+      "file": "temple/bells.go",
+      "line": 13,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Weather can be changed by anyone."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Yard can be changed by anyone."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Shelves can be changed by anyone."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 26,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Counter can be changed by anyone."
+    },
+    {
+      "column": 5,
+      "file": "temple/blade.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Spare can be changed by anyone."
+    },
+    {
+      "column": 5,
+      "file": "temple/chime.go",
+      "line": 45,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Strikes can be changed by anyone."
+    },
+    {
+      "column": 5,
+      "file": "temple/temple.go",
+      "line": 17,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Hidden can be changed by anyone."
+    },
+    {
+      "column": 6,
+      "file": "temple/banner.go",
+      "line": 5,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Banner is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 22,
+      "file": "temple/banner.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Banner.Raise is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/bells.go",
+      "line": 4,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Bell is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/bells.go",
+      "line": 16,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Tide is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/blade.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Cutter is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/blade.go",
+      "line": 18,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Blade is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/chime.go",
+      "line": 5,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Anything is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/chime.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Chime is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/chime.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "MockChime is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/chime.go",
+      "line": 17,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "NewMockChime is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/chime.go",
+      "line": 23,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Drum is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/generic.go",
+      "line": 4,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Box is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 5,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Cord is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 13,
+      "file": "temple/promises.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Cord.String is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 13,
+      "file": "temple/promises.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Cord.Error is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Knot is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Drawer is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 23,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Quiver is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 29,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Holder is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/promises.go",
+      "line": 32,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Crate is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 26,
+      "file": "temple/promises.go",
+      "line": 35,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Crate[Held].Hold is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/temple.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Wire is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/temple.go",
+      "line": 29,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Idle is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/vows.go",
+      "line": 5,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Rope is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/bells.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Gong is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/bells.go",
+      "line": 19,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Garden is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/bells.go",
+      "line": 30,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Plot is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/carried.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Sash is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/carried.go",
+      "line": 15,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Wrap is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/generic.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Drill is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/temple.go",
+      "line": 32,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Practice is used from outside only by tests."
+    },
+    {
+      "column": 1,
+      "file": "temple/inside_test.go",
+      "line": 1,
+      "package": "temple",
+      "scroll": "dojo",
+      "seen": "This test is package temple, inside the wall."
+    },
+    {
+      "column": 5,
+      "file": "temple/bells.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap tide, first at inside_test.go:19."
+    },
+    {
+      "column": 5,
+      "file": "temple/bells.go",
+      "line": 13,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap Weather, first at outside_test.go:72."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap Yard, first at outside_test.go:73."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap Shelves, first at outside_test.go:74."
+    },
+    {
+      "column": 2,
+      "file": "temple/bells.go",
+      "line": 26,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap Counter, first at outside_test.go:75."
+    },
+    {
+      "column": 5,
+      "file": "temple/chime.go",
+      "line": 45,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "Tests swap Strikes, first at outside_test.go:99."
+    },
+    {
+      "column": 6,
+      "file": "temple/outside_test.go",
+      "line": 38,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "fakeGong stands in for Gong, which has a mock: MockGong."
+    },
+    {
+      "column": 6,
+      "file": "temple/outside_test.go",
+      "line": 50,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "gongSound stands in for Gong, which has a mock: MockGong."
+    },
+    {
+      "column": 6,
+      "file": "temple/outside_test.go",
+      "line": 86,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "recorded stands in for Gong, which has a mock: MockGong."
+    },
+    {
+      "column": 6,
+      "file": "temple/outside_test.go",
+      "line": 93,
+      "package": "temple",
+      "scroll": "decoy",
+      "seen": "belted stands in for Gong, which has a mock: MockGong."
+    },
+    {
+      "column": 1,
+      "file": "temple/count.go",
+      "line": 3,
+      "package": "temple",
+      "scroll": "blade",
+      "seen": "The body of count is forged again at temple/count.go:21."
+    },
+    {
+      "column": 1,
+      "file": "temple/count.go",
+      "line": 21,
+      "package": "temple",
+      "scroll": "blade",
+      "seen": "The body of tally is forged again at temple/count.go:3."
+    },
+    {
+      "column": 1,
+      "file": "temple/edge.go",
+      "line": 5,
+      "package": "temple",
+      "scroll": "blade",
+      "seen": "The body of edgeOne is forged again at temple/edge.go:18."
+    },
+    {
+      "column": 1,
+      "file": "temple/edge.go",
+      "line": 18,
+      "package": "temple",
+      "scroll": "blade",
+      "seen": "The body of edgeTwo is forged again at temple/edge.go:5."
+    },
+    {
+      "column": 1,
+      "file": "temple/long.go",
+      "line": 3,
+      "package": "temple",
+      "scroll": "stance",
+      "seen": "long is 54 lines."
+    },
+    {
+      "column": 1,
+      "file": "temple/screens.go",
+      "line": 57,
+      "package": "temple",
+      "scroll": "stance",
+      "seen": "fiftyOne is 51 lines."
+    },
+    {
+      "column": 12,
+      "file": "temple/drawn.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "name",
+      "seen": "t stands alone."
+    },
+    {
+      "column": 5,
+      "file": "temple/inside_test.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "name",
+      "seen": "t stands alone."
+    },
+    {
+      "column": 25,
+      "file": "temple/outside_test.go",
+      "line": 34,
+      "package": "temple",
+      "scroll": "name",
+      "seen": "r stands alone."
+    },
+    {
+      "column": 10,
+      "file": "temple/temple.go",
+      "line": 37,
+      "package": "temple",
+      "scroll": "name",
+      "seen": "q stands alone."
+    },
+    {
+      "column": 20,
+      "file": "temple/outside_test.go",
+      "line": 33,
+      "package": "temple",
+      "scroll": "literal",
+      "seen": "A function is written here with no name."
+    },
+    {
+      "column": 20,
+      "file": "temple/outside_test.go",
+      "line": 34,
+      "package": "temple",
+      "scroll": "literal",
+      "seen": "A function is written here with no name."
+    },
+    {
+      "column": 17,
+      "file": "temple/outside_test.go",
+      "line": 74,
+      "package": "temple",
+      "scroll": "index",
+      "seen": "[0] says a place, not what is there."
+    },
+    {
+      "column": 18,
+      "file": "temple/bells.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 33,
+      "file": "temple/blade.go",
+      "line": 15,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "4 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/count.go",
+      "line": 4,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/count.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 25,
+      "file": "temple/count.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 30,
+      "file": "temple/count.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 21,
+      "file": "temple/count.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 21,
+      "file": "temple/count.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "temple/count.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "100 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/count.go",
+      "line": 13,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "100 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "temple/count.go",
+      "line": 15,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 17,
+      "file": "temple/count.go",
+      "line": 15,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 9,
+      "file": "temple/count.go",
+      "line": 22,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 15,
+      "file": "temple/count.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "temple/count.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 31,
+      "file": "temple/count.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 20,
+      "file": "temple/count.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 22,
+      "file": "temple/count.go",
+      "line": 26,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/count.go",
+      "line": 30,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "100 is a bare number."
+    },
+    {
+      "column": 9,
+      "file": "temple/count.go",
+      "line": 31,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "100 is a bare number."
+    },
+    {
+      "column": 10,
+      "file": "temple/count.go",
+      "line": 33,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 15,
+      "file": "temple/count.go",
+      "line": 33,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/edge.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "temple/edge.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "temple/edge.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "temple/edge.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/edge.go",
+      "line": 19,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "temple/edge.go",
+      "line": 21,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "temple/edge.go",
+      "line": 23,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "temple/edge.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/edge.go",
+      "line": 34,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 35,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "temple/edge.go",
+      "line": 36,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "temple/edge.go",
+      "line": 38,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "temple/edge.go",
+      "line": 39,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/edge.go",
+      "line": 47,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 48,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "temple/edge.go",
+      "line": 49,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "temple/edge.go",
+      "line": 51,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "temple/edge.go",
+      "line": 52,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 25,
+      "file": "temple/edge.go",
+      "line": 62,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 34,
+      "file": "temple/edge.go",
+      "line": 62,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 63,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 25,
+      "file": "temple/edge.go",
+      "line": 75,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 34,
+      "file": "temple/edge.go",
+      "line": 75,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/edge.go",
+      "line": 76,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 27,
+      "file": "temple/generic.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "5 is a bare number."
+    },
+    {
+      "column": 9,
+      "file": "temple/inside_test.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 15,
+      "file": "temple/inside_test.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "temple/inside_test.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 23,
+      "file": "temple/inside_test.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 9,
+      "file": "temple/inside_test.go",
+      "line": 19,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/inside_test.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 15,
+      "file": "temple/inside_test.go",
+      "line": 21,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/long.go",
+      "line": 4,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 23,
+      "file": "temple/outside_test.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "5 is a bare number."
+    },
+    {
+      "column": 18,
+      "file": "temple/outside_test.go",
+      "line": 21,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 22,
+      "file": "temple/outside_test.go",
+      "line": 74,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 20,
+      "file": "temple/outside_test.go",
+      "line": 75,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 42,
+      "file": "temple/outside_test.go",
+      "line": 79,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 35,
+      "file": "temple/promises.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 34,
+      "file": "temple/promises.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 7,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 9,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "4 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "5 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 12,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "6 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 13,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "8 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 15,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "9 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 16,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 17,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "11 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 18,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "12 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 19,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "13 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "14 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 21,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "15 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 22,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "16 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 23,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "17 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 24,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "18 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "19 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 26,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "20 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 27,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "21 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 28,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "22 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 29,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "23 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 30,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "24 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 31,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "25 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 32,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "26 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 33,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "27 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 34,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "28 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 35,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "29 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 36,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "30 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 37,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "31 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 38,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "32 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 39,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "33 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 40,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "34 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 41,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "35 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 42,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "36 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 43,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "37 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 44,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "38 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 45,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "39 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 46,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "40 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 47,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "41 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 48,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "42 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 49,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "43 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 50,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "44 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 51,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "45 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 52,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "46 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 58,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 59,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 60,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 61,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 62,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "4 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 63,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "5 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 64,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "6 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 65,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "7 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 66,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "8 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 67,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "9 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 68,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 69,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "11 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 70,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "12 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 71,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "13 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 72,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "14 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 73,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "15 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 74,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "16 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 75,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "17 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 76,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "18 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 77,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "19 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 78,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "20 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 79,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "21 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 80,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "22 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 81,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "23 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 82,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "24 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 83,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "25 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 84,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "26 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 85,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "27 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 86,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "28 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 87,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "29 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 88,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "30 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 89,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "31 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 90,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "32 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 91,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "33 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 92,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "34 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 93,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "35 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 94,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "36 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 95,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "37 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 96,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "38 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 97,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "39 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 98,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "40 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 99,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "41 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 100,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "42 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 101,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "43 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 102,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "44 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 103,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "45 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 104,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "46 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "temple/screens.go",
+      "line": 105,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "47 is a bare number."
+    },
+    {
+      "column": 41,
+      "file": "temple/temple.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "temple/temple.go",
+      "line": 29,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 30,
+      "file": "temple/temple.go",
+      "line": 32,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "temple/vows.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 0,
+      "file": "/dojo-elsewhere/moved.y",
+      "line": 6,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 5,
+      "file": "temple/bells.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 5,
+      "file": "temple/blade.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 5,
+      "file": "temple/outside_test.go",
+      "line": 47,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 5,
+      "file": "temple/temple.go",
+      "line": 17,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 5,
+      "file": "temple/universe.go",
+      "line": 9,
+      "package": "temple",
+      "scroll": "source",
+      "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
+    },
+    {
+      "column": 0,
+      "file": "/dojo-elsewhere/generated.y",
+      "line": 3,
+      "package": "temple",
+      "scroll": "vow",
+      "seen": "The vow to break stranger covers nothing here. Put it down."
+    },
+    {
+      "column": 1,
+      "file": "temple/bare.go",
+      "line": 3,
+      "package": "temple",
+      "scroll": "vow",
+      "seen": "The vow names \"\", which is no scroll."
+    },
+    {
+      "column": 60,
+      "file": "temple/nowhere.go",
+      "line": 1,
+      "package": "temple",
+      "scroll": "vow",
+      "seen": "The vow to break stranger covers nothing here. Put it down."
+    },
+    {
+      "column": 1,
+      "file": "temple/universe.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "vow",
+      "seen": "The vow names \"nosuch\", which is no scroll."
+    },
+    {
+      "column": 1,
+      "file": "temple/vows.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "vow",
+      "seen": "The vow to break name covers nothing here. Put it down."
+    },
+    {
+      "column": 0,
+      "file": "/dojo-elsewhere/generated.y",
+      "line": 3,
+      "package": "temple",
+      "scroll": "crowd",
+      "seen": "The module carries 13 vows over 16 tests, more than one in 20. Bring your vows to the master."
+    },
+    {
+      "column": 35,
+      "file": "village/alias.go",
+      "line": 10,
+      "package": "village",
+      "scroll": "stranger",
+      "seen": "Builds temple.Sword by literal."
+    },
+    {
+      "column": 10,
+      "file": "village/village.go",
+      "line": 10,
+      "package": "village",
+      "scroll": "stranger",
+      "seen": "Builds temple.Sword by literal."
+    },
+    {
+      "column": 6,
+      "file": "village/nameless.go",
+      "line": 4,
+      "package": "village",
+      "scroll": "waste",
+      "seen": "Twice is exported, and nothing outside village uses it."
+    },
+    {
+      "column": 6,
+      "file": "village/place.go",
+      "line": 5,
+      "package": "village",
+      "scroll": "waste",
+      "seen": "Head is exported, and nothing outside village uses it."
+    },
+    {
+      "column": 8,
+      "file": "village/leak.go",
+      "line": 3,
+      "package": "village",
+      "scroll": "practice",
+      "seen": "fmttest is made for tests, and real code imports it."
+    },
+    {
+      "column": 36,
+      "file": "village/first.go",
+      "line": 5,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Hone(temple.Forge(...)) is forged here, and again at village/second.go:5, village/third.go:5."
+    },
+    {
+      "column": 37,
+      "file": "village/loud1.go",
+      "line": 11,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Tie(strings.ToUpper(...)) is forged here, and again at village/loud2.go:10, village/loud3.go:10."
+    },
+    {
+      "column": 37,
+      "file": "village/loud2.go",
+      "line": 10,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Tie(strings.ToUpper(...)) is forged here, and again at village/loud1.go:11, village/loud3.go:10."
+    },
+    {
+      "column": 39,
+      "file": "village/loud3.go",
+      "line": 10,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Tie(strings.ToUpper(...)) is forged here, and again at village/loud1.go:11, village/loud2.go:10."
+    },
+    {
+      "column": 37,
+      "file": "village/second.go",
+      "line": 5,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Hone(temple.Forge(...)) is forged here, and again at village/first.go:5, village/third.go:5."
+    },
+    {
+      "column": 36,
+      "file": "village/third.go",
+      "line": 5,
+      "package": "village",
+      "scroll": "blade",
+      "seen": "temple.Hone(temple.Forge(...)) is forged here, and again at village/first.go:5, village/second.go:5."
+    },
+    {
+      "column": 22,
+      "file": "village/bury.go",
+      "line": 7,
+      "package": "village",
+      "scroll": "buried",
+      "seen": "\"/tmp/dojo.txt\" is one machine's path, handed to os.WriteFile."
+    },
+    {
+      "column": 9,
+      "file": "village/nameless.go",
+      "line": 6,
+      "package": "village",
+      "scroll": "literal",
+      "seen": "A function is written here with no name."
+    },
+    {
+      "column": 15,
+      "file": "village/place.go",
+      "line": 6,
+      "package": "village",
+      "scroll": "index",
+      "seen": "[0] says a place, not what is there."
+    },
+    {
+      "column": 25,
+      "file": "village/place.go",
+      "line": 6,
+      "package": "village",
+      "scroll": "index",
+      "seen": "[1] says a place, not what is there."
+    },
+    {
+      "column": 50,
+      "file": "village/alias.go",
+      "line": 10,
+      "package": "village",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 58,
+      "file": "village/belts.go",
+      "line": 7,
+      "package": "village",
+      "scroll": "number",
+      "seen": "1 is a bare number."
+    },
+    {
+      "column": 53,
+      "file": "village/drum_test.go",
+      "line": 14,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "village/more_test.go",
+      "line": 17,
+      "package": "village",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 29,
+      "file": "village/more_test.go",
+      "line": 17,
+      "package": "village",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "village/more_test.go",
+      "line": 23,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "village/more_test.go",
+      "line": 24,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "village/more_test.go",
+      "line": 25,
+      "package": "village",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "village/more_test.go",
+      "line": 27,
+      "package": "village",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "village/more_test.go",
+      "line": 28,
+      "package": "village",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "village/more_test.go",
+      "line": 36,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 14,
+      "file": "village/more_test.go",
+      "line": 37,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 19,
+      "file": "village/more_test.go",
+      "line": 38,
+      "package": "village",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 13,
+      "file": "village/more_test.go",
+      "line": 40,
+      "package": "village",
+      "scroll": "number",
+      "seen": "10 is a bare number."
+    },
+    {
+      "column": 12,
+      "file": "village/more_test.go",
+      "line": 41,
+      "package": "village",
+      "scroll": "number",
+      "seen": "3 is a bare number."
+    },
+    {
+      "column": 11,
+      "file": "village/nameless.go",
+      "line": 5,
+      "package": "village",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
+      "column": 26,
+      "file": "village/village_test.go",
+      "line": 11,
+      "package": "village",
+      "scroll": "number",
+      "seen": "2 is a bare number."
+    },
+    {
+      "column": 2,
+      "file": "village/village.go",
+      "line": 9,
+      "package": "village",
+      "scroll": "vow",
+      "seen": "The vow to break stranger gives no reason."
+    }
+  ],
+  "module": "example.com/dojo",
+  "vows": [
+    {
+      "column": 2,
+      "file": "temple/temple.go",
+      "line": 13,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Wire.Name stands open. Its tag says a reader needs it. If this is the wire, vow it.",
+      "vow": "yaml reads it; this is the wire"
+    },
+    {
+      "column": 2,
+      "file": "temple/vows.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "gate",
+      "seen": "Rope.Knot stands open.",
+      "vow": "the boat reads the knot"
+    },
+    {
+      "column": 0,
+      "file": "/dojo-elsewhere/moved.y",
+      "line": 6,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "Moved can be changed by anyone.",
+      "vow": "written after its code in a moved file"
+    },
+    {
+      "column": 5,
+      "file": "temple/notes.txt",
+      "line": 2,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "DirectedOne can be changed by anyone.",
+      "vow": "alone where it is written, though said to be inside a line"
+    },
+    {
+      "column": 5,
+      "file": "temple/notes.txt",
+      "line": 4,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "DirectedTwo can be changed by anyone.",
+      "vow": "alone where it is written, though said to be at a line's end"
+    },
+    {
+      "column": 5,
+      "file": "temple/notes.txt",
+      "line": 6,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "DirectedThree can be changed by anyone.",
+      "vow": "alone where it is written, though said to be past a line's end"
+    },
+    {
+      "column": 7,
+      "file": "temple/notes.txt",
+      "line": 7,
+      "package": "temple",
+      "scroll": "well",
+      "seen": "DirectedFour can be changed by anyone.",
+      "vow": "after its code, so it covers its own line"
+    }
+  ]
+}

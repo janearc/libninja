@@ -1,0 +1,5 @@
+# the editors keep this fixture alike, in a checkout or in a copy of one.
+root = true
+
+[*.go]
+indent_style = tab

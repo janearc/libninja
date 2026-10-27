@@ -1,0 +1,6 @@
+# the dojo says how it is kept, so its report is the same wherever its
+# tree sits: in the repository, or in a copy with nothing above it.
+root = true
+
+[*.go]
+indent_style = tab

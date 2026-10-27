@@ -1,0 +1,53 @@
+# picked-numbers.yml: every number libninja's scrolls use that someone
+# chose, with who and when (the maintainer's ruling, 2026-10-18: a picked number is
+# config, in yml). the scrolls ask for them by name; numbers true by
+# definition stay in the code and say they are defined.
+
+numbers:
+  - name: deepest
+    value: 2
+    says: how many calls may stand inside one another, through their arguments; f(g(x)) is fine and f(g(h(x))) is a hit
+    kind: picked
+    by: "the maintainer, 2026-10-18: \"func(funcb(funcc))) is too much.\""
+
+  - name: longest-stance
+    value: 50
+    says: the most lines a function may take, its first line to its closing brace, about one screen
+    kind: picked
+    by: the maintainer, 2026-10-07, a test of whether a function can be read at once
+
+  - name: line-width
+    value: 72
+    says: how wide the master's prose is wrapped
+    kind: picked
+    by: the author, 2026-10-07
+
+  - name: smallest-blade
+    value: 40
+    says: the fewest syntax nodes a body has before two bodies alike count as one forged twice; below it, alike is usually only short
+    kind: picked
+    by: the author, 2026-10-07, a first guess to be tuned on real code
+
+  - name: fewest-copies
+    value: 3
+    says: how many files must make the same call of a call before it is a blade forged in each, the rule of three
+    kind: picked
+    by: the author, 2026-10-07
+
+  - name: row
+    value: 2
+    says: how many numbers side by side in a composite literal make a table
+    kind: picked
+    by: the author, 2026-10-18
+
+  - name: fewest-reason-words
+    value: 3
+    says: how many words a vow's reason has at least before it says anything; a vow with fewer covers nothing and is a hit of its own
+    kind: picked
+    by: the author, 2026-10-25, a first floor, to be tuned on real vows
+
+  - name: tests-per-vow
+    value: 20
+    says: how many test functions a module has to each vow it carries, at least; one vow to twenty tests is the most, and above it the vows go to the master
+    kind: picked
+    by: "the maintainer, 2026-10-25: the ceiling is one vow per twenty tests."

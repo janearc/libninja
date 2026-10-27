@@ -1,0 +1,6 @@
+# the changes game mutants lets by, one a line as NAME :: WHY, the name
+# as the report prints it. a change belongs here only when it makes no
+# difference to anything a scroll says; a change a test could tell apart
+# gets the test instead.
+reading.go indexUses: if obj.Pkg() == nil || !read.inModule(obj.Pkg().Path()) { continue } => if obj.Pkg() == nil || !read.inModule(obj.Pkg().Path()) { } :: the index only grows: every scroll asks the index only of names the module declares (madeByATest, outsiders, reachOf and the members and carriers it adds), and a use is keyed by where its name is declared, so the uses of the universe's and other modules' names are never read
+kernel.go visit: if err != nil { return nil } => if err != nil { } :: WalkDir hands an error only for a directory it has entered and could not read (the root holds go.mod, so it is read), and the directory branch below then passes it by or skips it, which is what returning nil does; TestADirectoryTheWalkCannotReadIsPassedBy holds that a shut directory is passed by and the rest is read
