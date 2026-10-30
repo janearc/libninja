@@ -109,6 +109,12 @@ func TestTheDojoBreaksEveryScroll(test *testing.T) {
 		{"index", "village/place.go", "[1] says a place"},
 		{"vow", "village/village.go", "The vow to break stranger gives no " +
 			"reason."},
+		{"feint", "temple/feint.go", "feintThing{} is an empty " +
+			"value handed back with an error."},
+		{"feint", "temple/feint.go", "made is a feintThing " +
+			"declared and never set"},
+		{"feint", "temple/feint.go", "feintThing{...} has " +
+			"fields set"},
 	} {
 		if !holds(facts["hits"], want.scroll, want.file, want.said) {
 			test.Errorf("no %s in %s saying %q", want.scroll, want.file,

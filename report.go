@@ -39,7 +39,8 @@ func (module Module) Throw() Report {
 		read.ages, read.buriedPaths, read.editors, read.nests,
 		read.literals,
 		read.indexes, read.numbers, read.tables, read.kernels,
-		read.sourcelessNumbers, read.emptyVows, read.crowd} {
+		read.sourcelessNumbers, read.feints, read.emptyVows,
+		read.crowd} {
 		found = append(found, throw()...)
 	}
 	report := Report{dir: read.dir, module: read.module,

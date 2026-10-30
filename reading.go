@@ -55,34 +55,34 @@ const loadMode = packages.NeedName | packages.NeedFiles |
 // name reaches is only known by reading all of it.
 //
 // It refuses a directory in no module. It also refuses a module that
-// does not compile, since the scrolls read types.
-func Load(dir string) (Module, error) {
+// does not compile, since the scrolls read types. On a refusal it
+// returns nil and the error.
+func Load(dir string) (*Module, error) {
 	whole, err := moduleRoot(dir)
 	if err != nil {
-		return Module{}, err
+		return nil, err
 	}
 	fset := token.NewFileSet()
 	config := &packages.Config{Mode: loadMode, Dir: whole, Tests: true,
 		Fset: fset}
 	loaded, err := packages.Load(config, "./...")
 	if err != nil {
-		return Module{}, err
+		return nil, err
 	}
 	kept, err := compiled(loaded)
 	if err != nil {
-		return Module{}, err
+		return nil, err
 	}
 	module := moduleOf(kept)
 	if module == "" {
-		return Module{}, fmt.Errorf("libninja: no module under %s",
-			whole)
+		return nil, fmt.Errorf("libninja: no module under %s", whole)
 	}
 	read := reading{dir: whole, module: module, fset: fset, pkgs: kept}
 	read.markGenerated()
 	read.indexUses()
 	read.gatherPromises()
 	read.gatherVows()
-	return Module{read}, nil
+	return &Module{read}, nil
 }
 
 // compiled is the packages that hold code. The test mains go generates

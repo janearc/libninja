@@ -154,6 +154,14 @@ var sourceless = scroll{"source", "the scroll of the sourceless number",
 		"definition stays, and its comment says it is defined.",
 	""}
 
+var feint = scroll{"feint", "the scroll of the defensive feint",
+	"A ninja who is refused leaves no feint behind, for whoever finds " +
+		"an empty blade will take it for a real one.",
+	"On a refusal return nothing usable: a pointer, nil; a slice, " +
+		"nil; or change the result so that no value comes back " +
+		"beside the error.",
+	""}
+
 var crowdedVows = scroll{"crowd", "the scroll of the crowded vows",
 	"A ninja who vows at every step has stopped training.",
 	"A ninja has pride and does not run from a fight. Where a scroll " +
@@ -171,7 +179,7 @@ func scrolls() []scroll {
 	return []scroll{gate, stranger, well, waste, practice, dojo, decoy,
 		blade, stance, truename, trueAge, buried, editorless, nested,
 		nameless, place, bare, tableInCode, kernelHeld, sourceless,
-		emptyVow, crowdedVows}
+		feint, emptyVow, crowdedVows}
 }
 
 // named is the scroll a vow names, or false.

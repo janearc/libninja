@@ -9,7 +9,8 @@
 //
 // Also the same work forged twice, functions too long to see at once,
 // one-letter names, a main that cannot say which commit it is, and a
-// path that is true on one machine written into the code.
+// path that is true on one machine written into the code, and a struct
+// handed back beside an error, for a caller to use unchecked.
 //
 // A scroll is broken only with a vow, written where it is broken, on
 // the line above the finding or at the end of its line:

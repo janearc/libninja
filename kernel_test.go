@@ -56,7 +56,7 @@ const heldOne = 1
 // throwing is a module thrown on a goroutine of its own, so that a test
 // can give the throw a deadline.
 type throwing struct {
-	module libninja.Module
+	module *libninja.Module
 	done   chan libninja.Report
 }
 

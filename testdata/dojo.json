@@ -1017,6 +1017,14 @@
       "seen": "0 is a bare number."
     },
     {
+      "column": 9,
+      "file": "temple/feint.go",
+      "line": 29,
+      "package": "temple",
+      "scroll": "number",
+      "seen": "0 is a bare number."
+    },
+    {
       "column": 27,
       "file": "temple/generic.go",
       "line": 11,
@@ -1985,6 +1993,30 @@
       "seen": "A number named here says why, but not that it is defined; measured or picked, it lives in data."
     },
     {
+      "column": 2,
+      "file": "temple/feint.go",
+      "line": 11,
+      "package": "temple",
+      "scroll": "feint",
+      "seen": "feintThing{} is an empty value handed back with an error. A caller may use it unchecked. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result."
+    },
+    {
+      "column": 2,
+      "file": "temple/feint.go",
+      "line": 16,
+      "package": "temple",
+      "scroll": "feint",
+      "seen": "made is a feintThing declared and never set, handed back with an error. A caller may use it unchecked. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result."
+    },
+    {
+      "column": 2,
+      "file": "temple/feint.go",
+      "line": 20,
+      "package": "temple",
+      "scroll": "feint",
+      "seen": "feintThing{...} has fields set and is handed back with an error. It looks like real data, so a caller who skips the check uses it. Check the error first and build only on success: if err != nil { return nil, err }. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result."
+    },
+    {
       "column": 0,
       "file": "/dojo-elsewhere/generated.y",
       "line": 3,
@@ -2030,7 +2062,7 @@
       "line": 3,
       "package": "temple",
       "scroll": "crowd",
-      "seen": "The module carries 13 vows over 16 tests, more than one in 20. Bring your vows to the master."
+      "seen": "The module carries 14 vows over 16 tests, more than one in 20. Bring your vows to the master."
     },
     {
       "column": 35,
@@ -2361,6 +2393,15 @@
       "scroll": "well",
       "seen": "DirectedFour can be changed by anyone.",
       "vow": "after its code, so it covers its own line"
+    },
+    {
+      "column": 2,
+      "file": "temple/feint.go",
+      "line": 25,
+      "package": "temple",
+      "scroll": "feint",
+      "seen": "feintThing{} is an empty value handed back with an error. A caller may use it unchecked. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result.",
+      "vow": "the dojo keeps one vowed return to show it"
     }
   ]
 }

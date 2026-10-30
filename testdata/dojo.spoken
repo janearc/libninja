@@ -1,4 +1,4 @@
-shuriken reads example.com/dojo: 287 hits in 11 packages, 13 vows (gate 2, stranger 3, well 5, name 1, unnamed 1, nosuch 1).
+shuriken reads example.com/dojo: 291 hits in 11 packages, 14 vows (gate 2, stranger 3, well 5, name 1, feint 1, unnamed 1, nosuch 1).
 
 cmd/gate, stay here. Sit down.
 
@@ -355,6 +355,7 @@ temple, stay here. Sit down.
     temple/edge.go:75  2 is a bare number.
     temple/edge.go:75  7 is a bare number.
     temple/edge.go:76  0 is a bare number.
+    temple/feint.go:29  0 is a bare number.
     temple/generic.go:11  5 is a bare number.
     temple/inside_test.go:6  1 is a bare number.
     temple/inside_test.go:6  1 is a bare number.
@@ -490,6 +491,17 @@ temple, stay here. Sit down.
   for both by name. A number true by definition stays, and its comment
   says it is defined.
 
+  the scroll of the defensive feint (feint)
+  A ninja who is refused leaves no feint behind, for whoever finds an
+  empty blade will take it for a real one.
+
+    temple/feint.go:11  feintThing{} is an empty value handed back with an error. A caller may use it unchecked. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result.
+    temple/feint.go:16  made is a feintThing declared and never set, handed back with an error. A caller may use it unchecked. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result.
+    temple/feint.go:20  feintThing{...} has fields set and is handed back with an error. It looks like real data, so a caller who skips the check uses it. Check the error first and build only on success: if err != nil { return nil, err }. On a refusal return nothing usable: a pointer, nil; a slice, nil; or change the result.
+
+  On a refusal return nothing usable: a pointer, nil; a slice, nil; or
+  change the result so that no value comes back beside the error.
+
   the scroll of the empty vow (vow)
   A vow without words is no vow.
 
@@ -505,7 +517,7 @@ temple, stay here. Sit down.
   the scroll of the crowded vows (crowd)
   A ninja who vows at every step has stopped training.
 
-    /dojo-elsewhere/generated.y:3  The module carries 13 vows over 16 tests, more than one in 20. Bring your vows to the master.
+    /dojo-elsewhere/generated.y:3  The module carries 14 vows over 16 tests, more than one in 20. Bring your vows to the master.
 
   A ninja has pride and does not run from a fight. Where a scroll itself
   is wrong, bring it to the master, so it can be rewritten. A vow does
@@ -632,6 +644,7 @@ the vows
   temple/notes.txt:4  well: alone where it is written, though said to be at a line's end
   temple/notes.txt:6  well: alone where it is written, though said to be past a line's end
   temple/notes.txt:7  well: after its code, so it covers its own line
+  temple/feint.go:25  feint: the dojo keeps one vowed return to show it
 
   the scroll of the open gate              5
   the scroll of the stranger's house       2
@@ -647,8 +660,9 @@ the vows
   the scroll of the buried path            1
   the scroll of the nameless blade         3
   the scroll of the numbered place         3
-  the scroll of the bare number          185
+  the scroll of the bare number          186
   the scroll of the sourceless number      6
+  the scroll of the defensive feint        3
   the scroll of the empty vow              6
   the scroll of the crowded vows           1
 

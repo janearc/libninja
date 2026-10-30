@@ -149,6 +149,19 @@ is on pzm. pzm answers --age, --who and --help.
               research-derived-data.yml, pulled from its source; a
               picked one in the picked numbers, with who chose it; the
               code asks for both by name, through puzzlemouth/numbers.
+    feint     a function that refuses must return nothing usable. a
+              return that gives an error that is not nil, and beside
+              it a struct that is empty (T{}, or a variable declared
+              and never set before the return), hands a caller
+              something to use without checking. return a pointer, nil
+              on a refusal; a slice, nil; or change the result. a
+              struct with fields set (T{ID: id}, err) is just as bad:
+              it looks like real data, and is often built from a call
+              that failed. check the error first and build only on
+              success. the three are worded apart and are equal. basic
+              types (0, "", false) and every nil are let be, and so is a
+              variable that was set, or whose address or pointer
+              method may have set it, before the return.
     vow       a vow with no reason, or fewer than 3 words of it, covers
               nothing and is itself a hit.
     crowd     more than one vow to every 20 test functions: the scrolls
