@@ -92,11 +92,19 @@ is on pzm. pzm answers --age, --who and --help.
               keep compatible for nobody. make it private.
     practice  an export only tests call is a test reaching inside. test
               through what the package offers; if that is hard, the
-              difficulty is telling you the interface. a package named for
-              another package and test (httptest, for http) is let
-              be, if tests alone import it and some test does. the
-              other package must be one this module holds or the
-              test package imports; contest and latest are not let.
+              difficulty is telling you the interface. a library's face
+              with no caller in the module yet is promised instead by
+              an Example of its own package whose output is checked
+              (// Output:), which godoc shows and go test runs; an
+              Example that checks no output promises nothing, another
+              package's is not its documentation, and an internal
+              package, which only its own tree can import, has no one
+              to promise to.
+              a package named for another package and test (httptest,
+              for http) is let be, if tests alone import it and some
+              test does. the other package must be one this module
+              holds or the test package imports; contest and latest
+              are not let.
     dojo      a test inside the package sees everything, so it proves
               nothing about what callers see. move it to _test. a
               main's tests are let be: nothing outside can import it.

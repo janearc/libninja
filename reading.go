@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"go/ast"
+	"go/doc"
 	"go/token"
 	"os"
 	"path"
@@ -37,11 +38,16 @@ type reading struct {
 // use is one place a name is used. It holds where, and from which
 // package with any _test taken off. It holds whether the use is in a
 // test file, and whether it is from an external test package.
+//
+// It holds whether the use is inside an Example, and whether that
+// Example checks its output, which is what makes an Example a promise.
 type use struct {
 	at       token.Position
 	from     string
 	test     bool
 	external bool
+	shown    bool
+	checked  bool
 }
 
 // loadMode is what the scrolls need of each package. That is its files
@@ -205,6 +211,7 @@ func (read reading) files() []source {
 // whether a use of some kind is there.
 func (read *reading) indexUses() {
 	read.uses = map[string][]use{}
+	examples := read.examples()
 	for _, pkg := range read.pkgs {
 		for ident, obj := range pkg.TypesInfo.Uses {
 			if obj.Pkg() == nil ||
@@ -213,6 +220,7 @@ func (read *reading) indexUses() {
 			}
 			at := read.at(ident)
 			declared := read.key(obj)
+			shown, checked := examples.holding(ident.Pos())
 			read.uses[declared] = append(read.uses[declared], use{
 				at: at,
 				from: strings.TrimSuffix(pkg.PkgPath,
@@ -220,9 +228,50 @@ func (read *reading) indexUses() {
 				test: strings.HasSuffix(at.Filename,
 					"_test.go"),
 				external: strings.HasSuffix(pkg.PkgPath,
-					"_test")})
+					"_test"),
+				shown: shown, checked: checked})
 		}
 	}
+}
+
+// example is the span of one Example function's body, and whether the
+// Example checks its output. go runs an Example only when it says what
+// it prints, so only then is it a promise kept.
+type example struct {
+	from, to token.Pos
+	checked  bool
+}
+
+// examples is every Example in the module's test files, as go/doc finds
+// them: a function named Example, alone or with what it shows.
+type examples []example
+
+// examples finds every Example in the module's test files.
+func (read reading) examples() examples {
+	var found examples
+	for _, each := range read.files() {
+		if !each.test() {
+			continue
+		}
+		for _, shown := range doc.Examples(each.file) {
+			checked := shown.Output != "" || shown.EmptyOutput
+			found = append(found, example{shown.Code.Pos(),
+				shown.Code.End(), checked})
+		}
+	}
+	return found
+}
+
+// holding is whether a place is inside an Example, and whether that
+// Example checks its output. Every file has its own places, so one span
+// can hold a place of its file alone.
+func (found examples) holding(at token.Pos) (shown, checked bool) {
+	for _, each := range found {
+		if each.from <= at && at < each.to {
+			return true, each.checked
+		}
+	}
+	return false, false
 }
 
 // markGenerated records every generated file, which no scroll reads:

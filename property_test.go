@@ -75,8 +75,12 @@ func (module drawnModule) write(t *rapid.T, files map[string]string) string {
 	}
 	files["go.mod"] = "module example.com/drawn\n\ngo 1.26\n"
 	mode := os.FileMode(heldTo("open-file"))
+	dirMode := os.FileMode(heldTo("open-dir"))
 	for name, text := range files {
 		path := filepath.Join(dir, name)
+		if err := os.MkdirAll(filepath.Dir(path), dirMode); err != nil {
+			t.Fatal(err)
+		}
 		if err := os.WriteFile(path, []byte(text), mode); err != nil {
 			t.Fatal(err)
 		}
@@ -347,4 +351,116 @@ func (each vowCase) check(t *rapid.T) {
 func TestAVowCoversWhatItStandsBesideByTheRule(test *testing.T) {
 	test.Setenv("GOWORK", "off")
 	rapid.Check(test, vowCase{drawnModule{test.TempDir()}}.check)
+}
+
+// promised is how a drawn export is reached from outside: by an Example
+// in its own package that checks its output, by one that checks none,
+// by a checked Example in another package, or by a plain test.
+type promised string
+
+// drawPromise draws one of the four ways.
+func drawPromise(t *rapid.T) promised {
+	ways := []string{"checked", "unchecked", "elsewhere", "test"}
+	return promised(rapid.SampledFrom(ways).Draw(t, "way"))
+}
+
+// reached writes an export and the one outside use of it a promise
+// draws, in the package's own tests or another package's, and is what
+// the master should see of it, or nothing.
+func reached(way promised, index int, code, tests, other *lined) (string,
+	string) {
+	name := fmt.Sprintf("Drawn%d", index)
+	code.add("")
+	line := code.add(fmt.Sprintf("func %s() string { return %q }", name,
+		name))
+	tests.add("")
+	switch way {
+	case "checked":
+		tests.add(fmt.Sprintf("func Example%s() {", name))
+		tests.add(fmt.Sprintf("\tfmt.Println(drawn.%s())", name))
+		tests.add(fmt.Sprintf("\t// Output: %s", name))
+		tests.add("}")
+		return fmt.Sprintf("drawn.go:%d", line), ""
+	case "unchecked":
+		tests.add(fmt.Sprintf("func Example%s() { _ = drawn.%s() }", name,
+			name))
+		return fmt.Sprintf("drawn.go:%d", line),
+			name + " is shown in an example that checks no output."
+	case "elsewhere":
+		lowered := strings.ToLower(name)
+		other.add("")
+		other.add(fmt.Sprintf("func Example_%s() {", lowered))
+		other.add(fmt.Sprintf("\tfmt.Println(drawn.%s())", name))
+		other.add(fmt.Sprintf("\t// Output: %s", name))
+		other.add("}")
+		return fmt.Sprintf("drawn.go:%d", line),
+			name + " is used from outside only by tests."
+	}
+	tests.add(fmt.Sprintf("func Test%s(test *testing.T) { _ = drawn.%s() }",
+		name, name))
+	return fmt.Sprintf("drawn.go:%d", line),
+		name + " is used from outside only by tests."
+}
+
+// promiseCase draws exports reached each way into modules under base,
+// the package internal or not.
+type promiseCase struct{ module drawnModule }
+
+// check holds that an export is a practice sword unless an Example of
+// its own package that checks its output shows it, and always when the
+// package is internal, where the master says so.
+func (each promiseCase) check(t *rapid.T) {
+	most := int(heldTo("drawn-most-promises"))
+	ways := rapid.SliceOfN(rapid.Custom(drawPromise), atLeastOne, most).
+		Draw(t, "ways")
+	inside := rapid.Bool().Draw(t, "internal")
+	folder, path := "", "example.com/drawn"
+	if inside {
+		folder, path = "internal/drawn/", "example.com/drawn/internal/drawn"
+	}
+	code := lined{[]string{"package drawn"}}
+	tests := lined{[]string{"package drawn_test", "", "import (",
+		`	"fmt"`, `	"testing"`, "", fmt.Sprintf("\t%q", path), ")", "",
+		"func TestDrawn(test *testing.T) { fmt.Print(drawn.Drawn0()) }"}}
+	var other lined
+	var want []string
+	for index, way := range ways {
+		at, seen := reached(way, index, &code, &tests, &other)
+		if seen == "" && inside {
+			seen = fmt.Sprintf("Drawn%d is shown in an example, and the "+
+				"package is internal: no one outside its tree can be "+
+				"promised it.", index)
+		}
+		if seen != "" {
+			want = append(want, folder+at+" "+seen)
+		}
+	}
+	slices.Sort(want)
+	files := map[string]string{folder + "drawn.go": code.text(),
+		folder + "drawn_test.go": tests.text()}
+	if len(other.lines) >= atLeastOne {
+		files["other/other.go"] = "package other\n"
+		files["other/other_test.go"] = otherPackage(path) + other.text()
+	}
+	dir := each.module.write(t, files)
+	report, facts := reported(t, dir)
+	if got := seenAt(facts, "hits", "practice"); !slices.Equal(got, want) {
+		t.Fatalf("practice %q, not %q", got, want)
+	}
+	spokenAs(t, report, facts)
+}
+
+// The property and its anti-test: however exports are reached, each is
+// a practice sword unless an Example of its own package that checks its
+// output shows it, and every one is when the package is internal.
+func TestAnExportIsPromisedByACheckedExampleUnlessInternal(test *testing.T) {
+	test.Setenv("GOWORK", "off")
+	rapid.Check(test, promiseCase{drawnModule{test.TempDir()}}.check)
+}
+
+// otherPackage is the head of another package's test file, which
+// imports the drawn package by its path for its Examples to show.
+func otherPackage(path string) string {
+	return "package other_test\n\nimport (\n\t\"fmt\"\n\n\t" +
+		strconv.Quote(path) + "\n)\n"
 }

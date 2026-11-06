@@ -66,6 +66,14 @@
     },
     {
       "column": 6,
+      "file": "internal/anvil/anvil.go",
+      "line": 8,
+      "package": "internal/anvil",
+      "scroll": "practice",
+      "seen": "Strike is shown in an example, and the package is internal: no one outside its tree can be promised it."
+    },
+    {
+      "column": 6,
       "file": "mocks/bells.go",
       "line": 31,
       "package": "mocks",
@@ -362,6 +370,22 @@
     },
     {
       "column": 6,
+      "file": "temple/showy.go",
+      "line": 8,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Showy is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
+      "file": "temple/showy.go",
+      "line": 14,
+      "package": "temple",
+      "scroll": "waste",
+      "seen": "Example_showy is exported, and nothing outside temple uses it."
+    },
+    {
+      "column": 6,
       "file": "temple/temple.go",
       "line": 11,
       "package": "temple",
@@ -426,11 +450,27 @@
     },
     {
       "column": 6,
+      "file": "temple/elsewhere.go",
+      "line": 6,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Elsewhere is used from outside only by tests."
+    },
+    {
+      "column": 6,
       "file": "temple/generic.go",
       "line": 11,
       "package": "temple",
       "scroll": "practice",
       "seen": "Drill is used from outside only by tests."
+    },
+    {
+      "column": 6,
+      "file": "temple/shown.go",
+      "line": 10,
+      "package": "temple",
+      "scroll": "practice",
+      "seen": "Unshown is shown in an example that checks no output."
     },
     {
       "column": 6,

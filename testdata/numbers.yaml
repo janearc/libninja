@@ -80,3 +80,9 @@ numbers:
     says: how many test functions a module must have to each vow before the crowd scroll is quiet; the tests hold libninja to the maintainer's ceiling of one vow in twenty tests, so changing the picked number makes them fail
     kind: picked
     by: "the maintainer, 2026-10-25: the ceiling is one vow per twenty tests."
+
+  - name: drawn-most-promises
+    value: 6
+    says: the most exports a drawn module holds for the promise property, each reached by an Example that checks its output, one that checks none, or a plain test
+    kind: picked
+    by: hippo, 2026-11-05, for the example rule

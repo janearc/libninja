@@ -15,7 +15,11 @@ import (
 
 // reach is how far a name is used. The least is only inside its own
 // package. Next is from outside by tests alone. The most is from outside
-// by real code.
+// by real code, or by an Example that checks its output.
+//
+// The maintainer's ruling, 2026-11-05: such an Example promises the
+// name to whoever reads the package, as a library's callers are not in
+// its module.
 type reach int
 
 const (
@@ -77,9 +81,7 @@ func (read reading) idle() []finding {
 					continue
 				}
 				found = append(found, finding{practice,
-					student, at,
-					fmt.Sprintf("%s is used from outside "+
-						"only by tests.", name), ""})
+					student, at, read.practiced(obj, name), ""})
 			}
 		}
 	}
@@ -188,16 +190,14 @@ func exported(pkg *types.Package) []types.Object {
 // function of their package that takes one or gives one back.
 func (read reading) reachOf(obj types.Object) reach {
 	home := obj.Pkg().Path()
-	keys := []string{read.key(obj)}
-	if typeName, ok := obj.(*types.TypeName); ok {
-		keys = append(keys, read.membersOf(typeName)...)
-		keys = append(keys, read.carriersOf(typeName)...)
-	}
+	keys := read.keysOf(obj)
 	far := inside
 	for _, key := range keys {
 		for _, each := range read.uses[key] {
 			switch {
 			case !each.test && each.from != home:
+				return outside
+			case each.checked && each.from == home && !internal(home):
 				return outside
 			case each.test && (each.from != home || each.external):
 				far = testsOnly
@@ -205,6 +205,49 @@ func (read reading) reachOf(obj types.Object) reach {
 		}
 	}
 	return far
+}
+
+// internal is whether a package path has internal among its elements,
+// which go lets only its own tree import. No Example can promise its
+// names to anyone else, so none carries them.
+func internal(pkgPath string) bool {
+	return slices.Contains(strings.Split(pkgPath, "/"), "internal")
+}
+
+// showing is how a name is shown in Examples: by one in its own package
+// that checks its output, which is its promise; by one that checks its
+// output in another package, which is not; or only by ones that check
+// nothing.
+type showing struct{ promised, elsewhere, unchecked bool }
+
+// shownBy is how a name is shown in the module's Examples.
+func (read reading) shownBy(obj types.Object) showing {
+	home := obj.Pkg().Path()
+	var seen showing
+	for _, key := range read.keysOf(obj) {
+		for _, each := range read.uses[key] {
+			switch {
+			case each.checked && each.from == home:
+				seen.promised = true
+			case each.checked:
+				seen.elsewhere = true
+			case each.shown:
+				seen.unchecked = true
+			}
+		}
+	}
+	return seen
+}
+
+// keysOf is where a name is declared, and for a type where its methods,
+// fields and carriers are: every place a use of it is keyed by.
+func (read reading) keysOf(obj types.Object) []string {
+	keys := []string{read.key(obj)}
+	if typeName, ok := obj.(*types.TypeName); ok {
+		keys = append(keys, read.membersOf(typeName)...)
+		keys = append(keys, read.carriersOf(typeName)...)
+	}
+	return keys
 }
 
 // carriersOf is where each exported function of a type's package is
@@ -286,4 +329,22 @@ func (read reading) firstOf(pkg *packages.Package) *ast.File {
 // byName orders two files by their names.
 func (read reading) byName(one, other *ast.File) int {
 	return cmp.Compare(read.at(one).Filename, read.at(other).Filename)
+}
+
+// practiced is what the master sees of a practice sword: that only
+// tests use it; that an Example in an internal package shows it, which
+// can promise it to no one outside the package's tree; or that the
+// Examples that show it check nothing, which promises nothing.
+func (read reading) practiced(obj types.Object, name string) string {
+	seen := read.shownBy(obj)
+	switch {
+	case seen.promised && internal(obj.Pkg().Path()):
+		return fmt.Sprintf("%s is shown in an example, and the package "+
+			"is internal: no one outside its tree can be promised it.",
+			name)
+	case seen.unchecked && !seen.promised && !seen.elsewhere:
+		return fmt.Sprintf("%s is shown in an example that checks no "+
+			"output.", name)
+	}
+	return fmt.Sprintf("%s is used from outside only by tests.", name)
 }

@@ -45,9 +45,11 @@ var practice = scroll{"practice", "the scroll of the practice sword",
 	"Only tests call it from outside. Make it private, and test " +
 		"through what the package offers. If that is hard, the " +
 		"difficulty is the lesson: it is telling you the interface. " +
-		"A " +
-		"package named for its tests, like httptest, is no practice " +
-		"sword: only tests may import it, and some test must.",
+		"A library's face with no caller yet is promised instead by " +
+		"an Example whose output is checked, in any package but an " +
+		"internal one. A package named for its tests, like httptest, " +
+		"is no practice sword: only tests may import it, and some " +
+		"test must.",
 	`00:12:37  "Master, it's practice time."`}
 
 var dojo = scroll{"dojo", "the scroll of the dojo wall",

@@ -1,4 +1,4 @@
-shuriken reads example.com/dojo: 291 hits in 11 packages, 14 vows (gate 2, stranger 3, well 5, name 1, feint 1, unnamed 1, nosuch 1).
+shuriken reads example.com/dojo: 296 hits in 12 packages, 14 vows (gate 2, stranger 3, well 5, name 1, feint 1, unnamed 1, nosuch 1).
 
 cmd/gate, stay here. Sit down.
 
@@ -61,9 +61,11 @@ drums, stay here. Sit down.
 
   Only tests call it from outside. Make it private, and test through
   what the package offers. If that is hard, the difficulty is the
-  lesson: it is telling you the interface. A package named for its
-  tests, like httptest, is no practice sword: only tests may import it,
-  and some test must.
+  lesson: it is telling you the interface. A library's face with no
+  caller yet is promised instead by an Example whose output is checked,
+  in any package but an internal one. A package named for its tests,
+  like httptest, is no practice sword: only tests may import it, and
+  some test must.
   00:12:37 "Master, it's practice time."
 
   the scroll of the bare number (number)
@@ -103,6 +105,24 @@ fmttest, stay here. Sit down.
 
 Understand?
 
+internal/anvil, stay here. Sit down.
+
+  the scroll of the practice sword (practice)
+  A ninja trains with the weapons he will carry, and no others.
+
+    internal/anvil/anvil.go:8  Strike is shown in an example, and the package is internal: no one outside its tree can be promised it.
+
+  Only tests call it from outside. Make it private, and test through
+  what the package offers. If that is hard, the difficulty is the
+  lesson: it is telling you the interface. A library's face with no
+  caller yet is promised instead by an Example whose output is checked,
+  in any package but an internal one. A package named for its tests,
+  like httptest, is no practice sword: only tests may import it, and
+  some test must.
+  00:12:37 "Master, it's practice time."
+
+Understand?
+
 mocks, stay here. Sit down.
 
   the scroll of the decoy (decoy)
@@ -125,9 +145,11 @@ ostest, stay here. Sit down.
 
   Only tests call it from outside. Make it private, and test through
   what the package offers. If that is hard, the difficulty is the
-  lesson: it is telling you the interface. A package named for its
-  tests, like httptest, is no practice sword: only tests may import it,
-  and some test must.
+  lesson: it is telling you the interface. A library's face with no
+  caller yet is promised instead by an Example whose output is checked,
+  in any package but an internal one. A package named for its tests,
+  like httptest, is no practice sword: only tests may import it, and
+  some test must.
   00:12:37 "Master, it's practice time."
 
   the scroll of the bare number (number)
@@ -197,6 +219,8 @@ temple, stay here. Sit down.
     temple/promises.go:29  Holder is exported, and nothing outside temple uses it.
     temple/promises.go:32  Crate is exported, and nothing outside temple uses it.
     temple/promises.go:35  Crate[Held].Hold is exported, and nothing outside temple uses it.
+    temple/showy.go:8  Showy is exported, and nothing outside temple uses it.
+    temple/showy.go:14  Example_showy is exported, and nothing outside temple uses it.
     temple/temple.go:11  Wire is exported, and nothing outside temple uses it.
     temple/temple.go:29  Idle is exported, and nothing outside temple uses it.
     temple/vows.go:5  Rope is exported, and nothing outside temple uses it.
@@ -212,14 +236,18 @@ temple, stay here. Sit down.
     temple/bells.go:30  Plot is used from outside only by tests.
     temple/carried.go:12  Sash is used from outside only by tests.
     temple/carried.go:15  Wrap is used from outside only by tests.
+    temple/elsewhere.go:6  Elsewhere is used from outside only by tests.
     temple/generic.go:11  Drill is used from outside only by tests.
+    temple/shown.go:10  Unshown is shown in an example that checks no output.
     temple/temple.go:32  Practice is used from outside only by tests.
 
   Only tests call it from outside. Make it private, and test through
   what the package offers. If that is hard, the difficulty is the
-  lesson: it is telling you the interface. A package named for its
-  tests, like httptest, is no practice sword: only tests may import it,
-  and some test must.
+  lesson: it is telling you the interface. A library's face with no
+  caller yet is promised instead by an Example whose output is checked,
+  in any package but an internal one. A package named for its tests,
+  like httptest, is no practice sword: only tests may import it, and
+  some test must.
   00:12:37 "Master, it's practice time."
 
   the scroll of the dojo wall (dojo)
@@ -553,9 +581,11 @@ village, stay here. Sit down.
 
   Only tests call it from outside. Make it private, and test through
   what the package offers. If that is hard, the difficulty is the
-  lesson: it is telling you the interface. A package named for its
-  tests, like httptest, is no practice sword: only tests may import it,
-  and some test must.
+  lesson: it is telling you the interface. A library's face with no
+  caller yet is promised instead by an Example whose output is checked,
+  in any package but an internal one. A package named for its tests,
+  like httptest, is no practice sword: only tests may import it, and
+  some test must.
   00:12:37 "Master, it's practice time."
 
   the scroll of the borrowed blade (blade)
@@ -649,8 +679,8 @@ the vows
   the scroll of the open gate              5
   the scroll of the stranger's house       2
   the scroll of the open well              7
-  the scroll of wasted power              26
-  the scroll of the practice sword        10
+  the scroll of wasted power              28
+  the scroll of the practice sword        13
   the scroll of the dojo wall              1
   the scroll of the decoy                 11
   the scroll of the borrowed blade        10

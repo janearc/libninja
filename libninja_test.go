@@ -555,3 +555,58 @@ func TestAPackageThatOnlyEndsInTestIsNoSupport(test *testing.T) {
 		}
 	}
 }
+
+// The test and the anti-test: an Example whose output is checked is a
+// promise, so the export it shows is no practice sword; one that checks
+// no output promises nothing, and the master says how it is shown.
+func TestAnExampleWithCheckedOutputIsAPromise(test *testing.T) {
+	_, facts := thrown(test, "testdata/dojo")
+	if holds(facts["hits"], "practice", "temple/shown.go", "Shown is") {
+		test.Error("ExampleShown checks its output, and Shown was " +
+			"called a practice sword")
+	}
+	if !holds(facts["hits"], "practice", "temple/shown.go",
+		"Unshown is shown in an example that checks no output.") {
+		test.Error("ExampleUnshown checks no output, and Unshown was " +
+			"not called a practice sword shown unchecked")
+	}
+}
+
+// The anti-test: an internal package can be imported by its own tree
+// alone, so an Example promises its names to no one, and the export it
+// shows is a practice sword; the master says the Example is there and
+// why it carries nothing.
+func TestAnInternalPackageHasNoOneToPromiseTo(test *testing.T) {
+	_, facts := thrown(test, "testdata/dojo")
+	if !holds(facts["hits"], "practice", "internal/anvil/anvil.go",
+		"Strike is shown in an example, and the package is internal: "+
+			"no one outside its tree can be promised it.") {
+		test.Error("anvil is internal, ExampleStrike checks its output, " +
+			"and Strike was not called a practice sword shown in an " +
+			"internal package")
+	}
+}
+
+// The anti-test: a checked Example in another package is not a name's
+// documentation, so it promises nothing, and the export it shows is a
+// practice sword used from outside only by tests.
+func TestAnotherPackagesExampleIsNoPromise(test *testing.T) {
+	_, facts := thrown(test, "testdata/dojo")
+	if !holds(facts["hits"], "practice", "temple/elsewhere.go",
+		"Elsewhere is used from outside only by tests.") {
+		test.Error("the village's Example_elsewhere checks its output, " +
+			"and Elsewhere was carried by it")
+	}
+}
+
+// The anti-test: go test runs no Example outside a test file, so an
+// Example with checked output in a plain file promises nothing, and the
+// export it shows is as unused as it was.
+func TestAnExampleOutsideATestFileIsNoPromise(test *testing.T) {
+	_, facts := thrown(test, "testdata/dojo")
+	if !holds(facts["hits"], "waste", "temple/showy.go",
+		"Showy is exported, and nothing outside temple uses it.") {
+		test.Error("Example_showy in a plain file checks its output, and " +
+			"Showy was carried by it")
+	}
+}
